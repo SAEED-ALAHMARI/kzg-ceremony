@@ -37,8 +37,10 @@ There are a number of independent implementations interested Ceremony participan
 | [Chotto](https://github.com/StefanBratanov/chotto/) | blst ([jblst](https://github.com/ConsenSys/jblst)) | Java | Apache 2.0 | Stefan Bratanov (@StefanBratanov) ||
 | [go-kzg-ceremony-client](https://github.com/jsign/go-kzg-ceremony-client) | gnark-crypto| Go | MIT| Ignacio Hagopian (@jsign)| Features: transcript verification, using additional external sources of entropy, eg. drand network, an arbitrary URL provided by the user. Note: double signing not supported due to lack of hash-to-curve in gnark. |
 | [eth-KZG-ceremony-alt](https://github.com/arnaucube/eth-kzg-ceremony-alt) | kilic | Go | GPL-3.0| Arnaucube (@arnaucube)| 
-| [Towers of Pau](https://github.com/dknopik/towers-of-pau/tree/proper-client)| blst | Go | MIT| Daniel Knopnik (@dknopik), Marius van der Widjen (@MariusVanDerWijden) | Linux only, no signatures. |
+| [Towers of Pau](https://github.com/dknopik/towers-of-pau/tree/proper-client)| blst | Go | MIT| Daniel Knopik (@dknopik), Marius van der Wijden (@MariusVanDerWijden) | Linux only, no signatures. |
 | [cpp-kzg-ceremony-client](https://github.com/PatriceVignola/cpp-kzg-ceremony-client)| blst | C++ | AGPL-3.0 | Patrice Vignola (@PatriceVignola) | Features: BLS/ECDSA signing, transcript verification, Linux/Windows/MacOS support |
+| [czg-keremony](https://github.com/dsrvlabs/czg-keremony)| noble-curves | JavaScript | MIT | JoonKyo Kim (@rootwarp),  HyungGi Kim (@kim201212) |  |
+| [kzg-ceremony-client](https://github.com/NethermindEth/kzg-ceremony-client)| blst | C# | MIT | Alexey (@flcl42), CheeChyuan (@chee-chyuan), Michal (@mpzajac), Jorge (@jmederosalvarado), Prince (@prix0007) | |
 
 ### Browser Interfaces
 
@@ -63,12 +65,42 @@ There are a number of independent implementations interested Ceremony participan
 | [Constantine](https://github.com/mratsim/constantine) | Nim | Apache 2.0 | |
 | [py_ecc](https://github.com/ethereum/py_ecc/) | Python | MIT | |
 | [matterlabs/EIP1962](https://github.com/matter-labs/eip1962) | Rust | Apache 2.0 | |
+| [noble-curves](https://github.com/paulmillr/noble-curves) | TypeScript/JS | MIT | |
 
+## Special Contributions
+
+April 1-16 2023 was the Special Contribution Period for the KZG Ceremony. This allowed participants to contribute in ways that may not have been possible in the Open Contribution period.
+
+While the Ceremony only needs a single honest participant to provide a secure output, Special Contributions provide additional assurances beyond a standard entropy contribution:
+
+- computing over the entropy in an isolated environment (eg. on an airgapped machine, wiping and physically destroying hardware) means it's unlikely for a malicious entity to have extracted the entropy at any point
+- detailed documentation (explore links below) attached to real reputations are unlikely to all have been coopted or faked by a malicious coordinating entity. The records are available for future observers to explore.
+- different hardware and software limits correlated risk
+- differentiated entropy generation (eg. measuring an explosion) prevents the Ceremony output being compromised by some failure in the regular entropy generation (eg. the hosted interface)
+- contributions involving large groups of people are harder to fake than those with only one person
+
+This post is a public record of the Special Contributions with information on methodology, where to find them in the transcript, and links to documenting media. 
+
+- [00 - Cryptosat](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#00---cryptosat)
+- [01 - The KZG Marble Machine](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#01---the-kzg-marble-machine)
+- [02 - Mr. Moloch's Ephemeral Album II](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#02---mr-molochs-ephemeral-album-ii)
+- [03 - Dog Dinner Dance Dynamics](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#03---dog-dinner-dance-dynamics)
+- [04 - CZG-Keremony - a pure JS KZG ceremony client](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#04---czg-keremony---a-pure-js-kzg-ceremony-client)
+- [05 - Improvised Theatre](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#05---improvised-theatre)
+- [06 - A Calculating Car](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#06---a-calculating-car)
+- [07 - A noisy city](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#07---a-noisy-city)
+- [08 - Exothermic Entropy](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#08---exothermic-entropy)
+- [09 - The Sferic Project](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#09---the-sferic-project)
+- [10 - The Great Belgian Beer Entropy Caper](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#10---the-great-belgian-beer-entropy-caper)
+- [11 - KZGamer - summoning Dankshard with a dice-tower](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#11---kzgamer---summoning-dankshard-with-a-dice-tower)
+- [12 - Catropy](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#12---catropy)
+- [13 - srsly - an iOS KZG Ceremony client](https://github.com/ethereum/kzg-ceremony/blob/main/special_contributions.md#13---srsly---an-ios-kzg-ceremony-client)
 
 ## Media
 
 | Title | Venue | Participants | Release Date |
 | :- | :-- | :--| --: |
+| [KZG Ceremony Duo Summons The Ethereum Road Map](https://thedefiant.io/kzg-ceremony-duo-summons-the-ethereum-road-map-2) | The Defiant | Tegan Kline, Carl Beekhuizen, Trent Van Epps | April 2023|
 | [Episode 262: Ethereum’s KZG Ceremony with Trent & Carl](https://zeroknowledge.fm/262-2/) | Zero Knowledge | Anna Rose, Kobi Gurkan, Carl Beekhuizen, Trent Van Epps | Feb 2023|
 | [Ethereum's KZG Ceremony](https://www.youtube.com/watch?v=nPzBMzX4pxQ) | Bankless | David Hoffman, Trent Van Epps, Carl Beekhuizen | Jan 2023 | 
 | [Peep an EIP - KZG Ceremony](https://www.youtube.com/watch?v=a_gWHaaOKSo) | EthCatHerders | Pooja Ranjan, Carl Beekhuizen | Jan 2023 | 
